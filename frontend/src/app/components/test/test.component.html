@@ -1,0 +1,34 @@
+<div class="container">
+  <br>
+  <p>Metodo 1</p>
+  <div layout="row" layout-align="center center" style="min-height: 50px">
+      <p>Text: {{text1}}</p>
+      <button class="btn btn-success" type="button" (click)="getText1()">Get</button>
+  </div>
+  <br>
+  -------------------------------
+  <br>
+  <p>Metodo 2</p>
+  <div layout="row" layout-align="center center" style="min-height: 50px">
+      <p>Text: {{text2}}</p>
+      <button class="btn btn-success" type="button" (click)="getText2()">Get</button>
+  </div>
+  <br>
+  -------------------------------
+  <p>Metodo 3</p>
+    <form #formGroup ="ngForm" (ngSumit)="addStudent(formGroup)">
+      <div class="row">
+        <div class="input-field col-s12">
+          <input type="text" name="text" #name="ngModel" [(ngModel)]="testService.selectedForm.text" placeholder="Pon un número">
+        </div>
+        <div class="card-action">
+          <div class= "input-field col s12">
+              <button class="btn" (click)="resetForm(formGroup)">Clean</button>
+              <button class="btn rigth" (click)="enviarTexto(formGroup)">Send</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <p>Text: {{text3}}</p>
+    <p>Verified: {{text4}}</p>
+</div>
